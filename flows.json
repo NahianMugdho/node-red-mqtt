@@ -1,0 +1,125 @@
+[
+    {
+        "id": "a7db57515c638e90",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "inject_pub",
+        "type": "inject",
+        "z": "a7db57515c638e90",
+        "name": "Send Hello",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "test/topic",
+        "payload": "Hello from Node-RED!",
+        "payloadType": "str",
+        "x": 300,
+        "y": 360,
+        "wires": [
+            [
+                "mqtt_out"
+            ]
+        ]
+    },
+    {
+        "id": "mqtt_out",
+        "type": "mqtt out",
+        "z": "a7db57515c638e90",
+        "name": "Publish TLS",
+        "topic": "test/topic",
+        "qos": "0",
+        "retain": false,
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt_broker_tls",
+        "x": 530,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "mqtt_in",
+        "type": "mqtt in",
+        "z": "a7db57515c638e90",
+        "name": "Subscribe TLS",
+        "topic": "test/#",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "mqtt_broker_tls",
+        "inputs": 0,
+        "x": 280,
+        "y": 440,
+        "wires": [
+            [
+                "debug_out"
+            ]
+        ]
+    },
+    {
+        "id": "debug_out",
+        "type": "debug",
+        "z": "a7db57515c638e90",
+        "name": "MQTT Debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "mqtt_broker_tls",
+        "type": "mqtt-broker",
+        "name": "Local TLS Broker",
+        "broker": "localhost",
+        "port": "8883",
+        "tls": "tls_config",
+        "clientid": "nodered_pub",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": ""
+    },
+    {
+        "id": "tls_config",
+        "type": "tls-config",
+        "name": "Local CA",
+        "cert": "",
+        "key": "",
+        "ca": "C:\\Users\\nahia\\.node-red\\certs\\broker.crt",
+        "verifyservercert": true
+    }
+]
