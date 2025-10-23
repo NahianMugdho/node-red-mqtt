@@ -1,0 +1,161 @@
+[
+    {
+        "id": "a7db57515c638e90",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ui_switch_led",
+        "type": "ui_switch",
+        "z": "a7db57515c638e90",
+        "name": "LED Control",
+        "label": "LED Control",
+        "group": "ui_group_led",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "topic": "home/led",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "x": 190,
+        "y": 120,
+        "wires": [
+            [
+                "mqtt_out_led"
+            ]
+        ]
+    },
+    {
+        "id": "mqtt_out_led",
+        "type": "mqtt out",
+        "z": "a7db57515c638e90",
+        "name": "Publish LED TLS",
+        "topic": "home/led",
+        "qos": "0",
+        "retain": false,
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt_broker_tls",
+        "x": 420,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "mqtt_in_led",
+        "type": "mqtt in",
+        "z": "a7db57515c638e90",
+        "name": "Subscribe LED TLS",
+        "topic": "home/led",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "mqtt_broker_tls",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 190,
+        "y": 200,
+        "wires": [
+            [
+                "ui_led"
+            ]
+        ]
+    },
+    {
+        "id": "ui_led",
+        "type": "ui_led",
+        "z": "a7db57515c638e90",
+        "order": 2,
+        "group": "ui_group_led",
+        "width": 3,
+        "height": 1,
+        "label": "LED Status",
+        "labelPlacement": "left",
+        "colorForValue": [
+            {
+                "color": "red",
+                "value": "OFF",
+                "valueType": "str"
+            },
+            {
+                "color": "green",
+                "value": "ON",
+                "valueType": "str"
+            }
+        ],
+        "shape": "circle",
+        "x": 420,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "ui_group_led",
+        "type": "ui_group",
+        "name": "Controls",
+        "tab": "ui_tab_led",
+        "order": 1,
+        "width": 6,
+        "collapse": false
+    },
+    {
+        "id": "mqtt_broker_tls",
+        "type": "mqtt-broker",
+        "name": "Local TLS Broker",
+        "broker": "localhost",
+        "port": "8883",
+        "tls": "tls_config",
+        "clientid": "nodered_pub",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "ui_tab_led",
+        "type": "ui_tab",
+        "name": "MQTT Dashboard",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "tls_config",
+        "type": "tls-config",
+        "name": "Local CA",
+        "cert": "",
+        "key": "",
+        "ca": "C:\\Users\\nahia\\.node-red\\certs\\broker.crt",
+        "verifyservercert": true
+    },
+    {
+        "id": "d26dfeda18efa6b7",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6",
+            "node-red-contrib-ui-led": "0.4.11"
+        }
+    }
+]

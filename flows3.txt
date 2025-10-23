@@ -1,0 +1,31 @@
+[
+    {
+        "id": "2f0e900119901cfb",
+        "type": "ui_template",
+        "z": "a7db57515c638e90",
+        "group": "",
+        "name": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "<div ng-bind-html=\"msg.payload\"></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 260,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8f385301c7d9af61",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6"
+        }
+    }
+]

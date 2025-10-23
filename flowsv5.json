@@ -22,29 +22,6 @@
         "disabled": false
     },
     {
-        "id": "021fbd05d4e43f4d",
-        "type": "tab",
-        "label": "Flow 2",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "6fc4c1fd1e8e91cb",
-        "type": "tab",
-        "label": "Flow 2",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "61cd1fac5155dcba",
-        "type": "tab",
-        "label": "Fan Interval Control",
-        "disabled": false,
-        "info": ""
-    },
-    {
         "id": "tls_config",
         "type": "tls-config",
         "name": "Local CA",
@@ -240,13 +217,163 @@
         "width": "10"
     },
     {
-        "id": "9bbe665b03c633c5",
+        "id": "f4e83d671dd939dc",
         "type": "ui_spacer",
         "z": "a7db57515c638e90",
         "name": "spacer",
         "group": "ui_group_led",
         "order": 5,
         "width": 2,
+        "height": 1
+    },
+    {
+        "id": "28232ce5882adcfa",
+        "type": "ui_spacer",
+        "z": "a7db57515c638e90",
+        "name": "spacer",
+        "group": "ui_group_led",
+        "order": 6,
+        "width": 16,
+        "height": 1
+    },
+    {
+        "id": "be44a944ae555a30",
+        "type": "ui_spacer",
+        "z": "a7db57515c638e90",
+        "name": "spacer",
+        "group": "ui_group_led",
+        "order": 7,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "592bb0b149c374ed",
+        "type": "ui_spacer",
+        "z": "a7db57515c638e90",
+        "name": "spacer",
+        "group": "ui_group_led",
+        "order": 9,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "5930e184edfaea03",
+        "type": "ui_spacer",
+        "z": "a7db57515c638e90",
+        "name": "spacer",
+        "group": "ui_group_led",
+        "order": 10,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "69c886ef4ea59719",
+        "type": "ui_spacer",
+        "z": "a7db57515c638e90",
+        "name": "spacer",
+        "group": "ui_group_led",
+        "order": 11,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "1269cf9ff10db98e",
+        "type": "ui_spacer",
+        "z": "a7db57515c638e90",
+        "name": "spacer",
+        "group": "ui_group_led",
+        "order": 12,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "43f515b8a61d4759",
+        "type": "ui_spacer",
+        "z": "a7db57515c638e90",
+        "name": "spacer",
+        "group": "ui_group_led",
+        "order": 13,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "7ef8880a44c5b026",
+        "type": "ui_spacer",
+        "z": "a7db57515c638e90",
+        "name": "spacer",
+        "group": "ui_group_led",
+        "order": 14,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "29f85bacc1585220",
+        "type": "ui_spacer",
+        "z": "a7db57515c638e90",
+        "name": "spacer",
+        "group": "ui_group_led",
+        "order": 15,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "598bd257990a8f57",
+        "type": "ui_spacer",
+        "z": "a7db57515c638e90",
+        "name": "spacer",
+        "group": "ui_group_led",
+        "order": 16,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "ade42929e95c2a58",
+        "type": "ui_spacer",
+        "z": "a7db57515c638e90",
+        "name": "spacer",
+        "group": "ui_group_led",
+        "order": 17,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "235fe4e03a43781a",
+        "type": "ui_spacer",
+        "z": "a7db57515c638e90",
+        "name": "spacer",
+        "group": "ui_group_led",
+        "order": 18,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "1105d3ccf9a5517a",
+        "type": "ui_spacer",
+        "z": "a7db57515c638e90",
+        "name": "spacer",
+        "group": "ui_group_led",
+        "order": 19,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "4069f71919cae72d",
+        "type": "ui_spacer",
+        "z": "a7db57515c638e90",
+        "name": "spacer",
+        "group": "ui_group_led",
+        "order": 20,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "16a5c4449eb47df6",
+        "type": "ui_spacer",
+        "z": "a7db57515c638e90",
+        "name": "spacer",
+        "group": "ui_group_led",
+        "order": 21,
+        "width": 5,
         "height": 1
     },
     {
@@ -708,9 +835,9 @@
         "z": "a7db57515c638e90",
         "group": "ui_group_led",
         "name": "",
-        "order": 6,
-        "width": 7,
-        "height": 4,
+        "order": 8,
+        "width": 8,
+        "height": 7,
         "format": "<div style=\"position:relative; width:100%; height:200px; margin:0 auto; background:#ccc; border:2px solid #333; border-radius:8px; background-image: url('/sonar.png'); background-size: cover; background-position: center;\">\n  <!-- Machine Box Overlay Text -->\n  <div style=\"position:absolute; width:100%; height:100%; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:18px; color:#333;\">\n    \n  </div>\n\n  <!-- LEDs -->\n  <div id=\"red-led\" class=\"led\" data-name=\"red\"></div>\n  <div id=\"blue-led\" class=\"led\" data-name=\"blue\"></div>\n</div>\n\n<style>\n  .led {\n    position: absolute;\n    width: 32px;\n    height: 32px;\n    border-radius: 50%;\n    background: #111;\n    box-shadow: 0 0 6px rgba(0,0,0,0.8);\n    transition: background 0.2s, box-shadow 0.2s;\n    transform: translate(-50%, -50%);\n  }\n\n  .led.on.red { background:#ff2b2b; box-shadow:0 0 15px rgba(255,43,43,0.9); }\n  .led.on.blue { background:#37ff00; box-shadow:0 0 15px rgba(55,255,0,0.9); }\n\n  /* Position LEDs on the box */\n  #red-led { left:25%; top:30%; }\n  #blue-led { left:75%; top:30%; }\n</style>\n\n<script>\n(function(scope){\n  function setLed(name, state){\n    var el = document.querySelector('.led[data-name=\"'+name+'\"]');\n    if(!el) return;\n    if(String(state) === 'ON'){\n      el.classList.add('on');\n      el.classList.add(name);\n    } else {\n      el.classList.remove('on');\n      el.classList.remove(name);\n    }\n  }\n\n  scope.$watch('msg', function(msg){\n    if(!msg) return;\n    if(msg.topic && msg.payload !== undefined){\n      setLed(String(msg.topic).toLowerCase(), msg.payload);\n    }\n  });\n})(scope);\n</script>\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
@@ -724,302 +851,12 @@
         ]
     },
     {
-        "id": "372b610aeac7fb9f",
-        "type": "comment",
-        "z": "a7db57515c638e90",
-        "name": "Liquid Level",
-        "info": "Liquid Level",
-        "x": 670,
-        "y": 640,
-        "wires": []
-    },
-    {
-        "id": "39cf272ef3f19a80",
-        "type": "comment",
-        "z": "a7db57515c638e90",
-        "name": "Fan ",
-        "info": "Liquid Level",
-        "x": 670,
-        "y": 820,
-        "wires": []
-    },
-    {
-        "id": "4db1ef09e14d4310",
-        "type": "function",
-        "z": "a7db57515c638e90",
-        "name": "function 1",
-        "func": "// Get current angle from flow context\nlet angle = flow.get(\"angle\") || 0;\n\n// Increment the angle by 10 degrees\nangle += 40;\nif(angle > 360) angle = 0;\n\n// Save it back to flow context\nflow.set(\"angle\", angle);\n\n// Send the angle as payload\nmsg.payload = angle;\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 520,
-        "y": 780,
-        "wires": [
-            [
-                "13bf58707eefcfe1"
-            ]
-        ]
-    },
-    {
-        "id": "13bf58707eefcfe1",
-        "type": "ui_template",
-        "z": "a7db57515c638e90",
-        "group": "ui_group_led",
-        "name": "",
-        "order": 10,
-        "width": 8,
-        "height": 1,
-        "format": "<img id=\"rotor\" src=\"/fan.png\" style=\"width:100px; transition: transform 0.2s;\">\n\n<script>\n    (function(scope){\n  scope.$watch('msg', function(msg){\n    if(msg.payload !== undefined){\n      document.getElementById('rotor').style.transform = 'rotate(' + msg.payload + 'deg)';\n    }\n  });\n})(scope);\n</script>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 800,
-        "y": 780,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "dac28d3873e8d1d5",
-        "type": "inject",
-        "z": "a7db57515c638e90",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "1",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "10",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 270,
-        "y": 780,
-        "wires": [
-            [
-                "4db1ef09e14d4310"
-            ]
-        ]
-    },
-    {
-        "id": "9ee21552061591c4",
-        "type": "comment",
-        "z": "a7db57515c638e90",
-        "name": "Fan ",
-        "info": "Liquid Level",
-        "x": 650,
-        "y": 1100,
-        "wires": []
-    },
-    {
-        "id": "44295de1dc67c384",
-        "type": "mqtt in",
-        "z": "a7db57515c638e90",
-        "name": "Bowl Temp Subscriber",
-        "topic": "bowlT",
-        "qos": "0",
-        "datatype": "auto",
-        "broker": "mqtt_local_broker",
-        "nl": false,
-        "rap": false,
-        "inputs": 0,
-        "x": 200,
-        "y": 940,
-        "wires": [
-            [
-                "a4482deb25555938"
-            ]
-        ]
-    },
-    {
-        "id": "a4482deb25555938",
-        "type": "switch",
-        "z": "a7db57515c638e90",
-        "name": "Check FS/ FO",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "FS",
-                "vt": "str"
-            },
-            {
-                "t": "neq",
-                "v": "FS",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 460,
-        "y": 940,
-        "wires": [
-            [
-                "aa3acfb8875214e4"
-            ],
-            [
-                "ee72f6c4beb4cc3b"
-            ]
-        ]
-    },
-    {
-        "id": "bffd14ee70740a45",
-        "type": "function",
-        "z": "a7db57515c638e90",
-        "name": "function 4",
-        "func": "// Initialize angle if not set\nlet angle = flow.get(\"angle\") || 0;\n\n// Get fan speed from slider\nlet fanSpeed =120;\n\n// Update angle\nangle += fanSpeed;\n// angle = angle % 360;\nif(angle > 360) angle = 0;\nflow.set(\"angle\", angle);\n\n// Send messages for fan rotation and status\nlet fanMsg = { payload: angle };\nlet statusMsg = { payload: \"Fan ON\" };\nreturn [fanMsg, statusMsg];\n",
-        "outputs": 2,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 960,
-        "y": 900,
-        "wires": [
-            [
-                "bf878b7b70f91c88"
-            ],
-            [
-                "3c536091a9e3da63"
-            ]
-        ]
-    },
-    {
-        "id": "bf878b7b70f91c88",
-        "type": "ui_template",
-        "z": "a7db57515c638e90",
-        "group": "ui_group_led",
-        "name": "",
-        "order": 7,
-        "width": 6,
-        "height": 4,
-        "format": "<div style=\"position:relative; width:150px; height:150px; margin:0 auto;\">\n  <img id=\"fan\" src=\"/fan.png\" style=\"width:100%; transition: transform 0.2s;\">\n</div>\n\n<script>\n  (function(scope) {\n  scope.$watch('msg', function(msg) {\n    if(!msg) return;\n    var angle = msg.payload || 0;\n    var fan = document.getElementById('fan');\n    if(fan) fan.style.transform = 'rotate(' + angle + 'deg)';\n  });\n})(scope);\n</script>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 1160,
-        "y": 860,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "3c536091a9e3da63",
-        "type": "ui_text",
-        "z": "a7db57515c638e90",
-        "group": "ui_group_led",
-        "order": 8,
-        "width": 3,
-        "height": 4,
-        "name": "",
-        "label": "is Fan needed?",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1200,
-        "y": 980,
-        "wires": []
-    },
-    {
-        "id": "aa3acfb8875214e4",
-        "type": "trigger",
-        "z": "a7db57515c638e90",
-        "name": "Fan Rotation Trigger",
-        "op1": "1",
-        "op2": "",
-        "op1type": "str",
-        "op2type": "str",
-        "duration": "1",
-        "extend": true,
-        "overrideDelay": false,
-        "units": "s",
-        "reset": "reset",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 740,
-        "y": 900,
-        "wires": [
-            [
-                "bffd14ee70740a45"
-            ]
-        ]
-    },
-    {
-        "id": "ee72f6c4beb4cc3b",
-        "type": "change",
-        "z": "a7db57515c638e90",
-        "name": "Fan OFF",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "Fan OFF",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "reset",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 700,
-        "y": 980,
-        "wires": [
-            [
-                "aa3acfb8875214e4",
-                "3c536091a9e3da63"
-            ]
-        ]
-    },
-    {
-        "id": "9e216f325483e4ce",
-        "type": "ui_text",
-        "z": "a7db57515c638e90",
-        "group": "ui_group_led",
-        "order": 9,
-        "width": 8,
-        "height": 1,
-        "name": "",
-        "label": "",
-        "format": "if Level is below -->  Green Led On --> Water Pump On",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 330,
-        "y": 1020,
-        "wires": []
+        "id": "e52b431dbfee6ed1",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6",
+            "node-red-contrib-ui-led": "0.4.11"
+        }
     }
 ]

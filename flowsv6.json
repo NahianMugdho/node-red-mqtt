@@ -1021,5 +1021,14 @@
         "x": 330,
         "y": 1020,
         "wires": []
+    },
+    {
+        "id": "4af4f3c1451ee969",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6",
+            "node-red-contrib-ui-led": "0.4.11"
+        }
     }
 ]

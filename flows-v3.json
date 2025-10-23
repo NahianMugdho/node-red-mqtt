@@ -1,0 +1,376 @@
+[
+    {
+        "id": "a7db57515c638e90",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ui_switch_led",
+        "type": "ui_switch",
+        "z": "a7db57515c638e90",
+        "name": "LED Control",
+        "label": "LED Control",
+        "group": "ui_group_led",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "topic": "home/led",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "x": 170,
+        "y": 120,
+        "wires": [
+            [
+                "mqtt_out_led"
+            ]
+        ]
+    },
+    {
+        "id": "mqtt_out_led",
+        "type": "mqtt out",
+        "z": "a7db57515c638e90",
+        "name": "Publish LED TLS",
+        "topic": "home/led",
+        "qos": "0",
+        "retain": false,
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt_broker_tls",
+        "x": 420,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "mqtt_in_led",
+        "type": "mqtt in",
+        "z": "a7db57515c638e90",
+        "name": "Subscribe LED TLS",
+        "topic": "home/led",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "mqtt_broker_tls",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 190,
+        "y": 200,
+        "wires": [
+            [
+                "ui_led"
+            ]
+        ]
+    },
+    {
+        "id": "ui_led",
+        "type": "ui_led",
+        "z": "a7db57515c638e90",
+        "order": 2,
+        "group": "ui_group_led",
+        "width": 3,
+        "height": 1,
+        "label": "LED Status",
+        "labelPlacement": "left",
+        "colorForValue": [
+            {
+                "color": "red",
+                "value": "OFF",
+                "valueType": "str"
+            },
+            {
+                "color": "green",
+                "value": "ON",
+                "valueType": "str"
+            }
+        ],
+        "shape": "circle",
+        "x": 420,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "4e7b117a2cda6781",
+        "type": "mqtt in",
+        "z": "a7db57515c638e90",
+        "name": "",
+        "topic": "sonarT",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "mqtt_broker_tls",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 280,
+        "wires": [
+            [
+                "2bcc0cbd3bf67033"
+            ]
+        ]
+    },
+    {
+        "id": "2bcc0cbd3bf67033",
+        "type": "switch",
+        "z": "a7db57515c638e90",
+        "name": "checkMsg",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "PO",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "PS",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 320,
+        "y": 280,
+        "wires": [
+            [
+                "edb1cedd5e757408",
+                "71f39a33dc7a9bfe"
+            ],
+            [
+                "24c30cbfb0942239",
+                "16f1936a25110ce5"
+            ]
+        ]
+    },
+    {
+        "id": "edb1cedd5e757408",
+        "type": "change",
+        "z": "a7db57515c638e90",
+        "name": "Red On",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ON",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 240,
+        "wires": [
+            [
+                "1d0f451232cca205"
+            ]
+        ]
+    },
+    {
+        "id": "24c30cbfb0942239",
+        "type": "change",
+        "z": "a7db57515c638e90",
+        "name": "Green On",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ON",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 440,
+        "wires": [
+            [
+                "069f55c1d4243f31"
+            ]
+        ]
+    },
+    {
+        "id": "1d0f451232cca205",
+        "type": "ui_led",
+        "z": "a7db57515c638e90",
+        "order": 2,
+        "group": "ui_group_led",
+        "width": 3,
+        "height": 1,
+        "label": "LED Status",
+        "labelPlacement": "left",
+        "colorForValue": [
+            {
+                "color": "#ff004c",
+                "value": "ON",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 810,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "069f55c1d4243f31",
+        "type": "ui_led",
+        "z": "a7db57515c638e90",
+        "order": 3,
+        "group": "ui_group_led",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#37ff00",
+                "value": "ON",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 770,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "16f1936a25110ce5",
+        "type": "change",
+        "z": "a7db57515c638e90",
+        "name": "Red FF",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "OFF",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 380,
+        "wires": [
+            [
+                "1d0f451232cca205"
+            ]
+        ]
+    },
+    {
+        "id": "71f39a33dc7a9bfe",
+        "type": "change",
+        "z": "a7db57515c638e90",
+        "name": "Green Off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "OFF",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 280,
+        "wires": [
+            [
+                "069f55c1d4243f31"
+            ]
+        ]
+    },
+    {
+        "id": "ui_group_led",
+        "type": "ui_group",
+        "name": "Controls",
+        "tab": "ui_tab_led",
+        "order": 1,
+        "width": 6,
+        "collapse": false
+    },
+    {
+        "id": "mqtt_broker_tls",
+        "type": "mqtt-broker",
+        "name": "Local TLS Broker",
+        "broker": "localhost",
+        "port": "8883",
+        "tls": "tls_config",
+        "clientid": "nodered_pub",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "ui_tab_led",
+        "type": "ui_tab",
+        "name": "MQTT Dashboard",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "tls_config",
+        "type": "tls-config",
+        "name": "Local CA",
+        "cert": "",
+        "key": "",
+        "ca": "C:\\Users\\nahia\\.node-red\\certs\\broker.crt",
+        "verifyservercert": true
+    },
+    {
+        "id": "630bbce5459a2e7c",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6",
+            "node-red-contrib-ui-led": "0.4.11"
+        }
+    }
+]
